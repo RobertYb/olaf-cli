@@ -1,6 +1,5 @@
 import colors from 'colors';
 import fs from 'fs';
-// import qrcode from 'qrcode-terminal';
 
 export default function () {
   const { version } = JSON.parse(fs.readFileSync(`${__dirname}/../package.json`, 'utf8'));
