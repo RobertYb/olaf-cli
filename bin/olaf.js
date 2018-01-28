@@ -83,11 +83,11 @@ _commander2.default.command('init').alias('i').description('使用olaf(奥拉夫
     questions.push({
       type: 'input',
       name: 'author',
-      message: '请输入Boss用户名(如:Gavin):',
+      message: '请输入作者英文名(如:Gavin):',
       validate(input) {
         const done = this.async();
         if (_joi2.default.validate(input, validates.author).error !== null) {
-          done('请输入正确的Boss用户名拼音(如:Gavin)');
+          done('请输入正确的作者英文名(如:Gavin)');
           return;
         }
         done(null, true);
