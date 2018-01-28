@@ -17,8 +17,7 @@ async function createProject(data) {
   if (path.basename(completePath) !== projectName) {
     if (type === 'react' && useScene === 1) {
       // pc
-      await execa.shell('git clone git@github.com:Gavin1995/olaf-react-next-pc.git');
-      await execa.shell(`mv olaf-react-next-pc ${projectName}`);
+      await execa.shell(`git clone git@github.com:Gavin1995/olaf-react-next-pc.git ${projectName}`);
       await execa.shell(`rm -rf ${projectName}/.git`);
     }
   }
